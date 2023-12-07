@@ -1,0 +1,316 @@
+// BASIC STYLING CSS FILE
+@import '../sass/basic';
+
+// VARIABLES CSS FILE
+@import '../sass/variables';
+
+body {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+i {
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 30px;
+  min-height: 100vh;
+  padding: 0px 30px;
+  margin-bottom: 20px;
+
+  .balance {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+
+    .income {
+      background-color: #a2ff86;
+    }
+
+    .expense {
+      background-color: #ff0063;
+    }
+
+    .wallet {
+      background-color: #fff;
+    }
+
+    .wallet,
+    .income,
+    .expense {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      margin: 10px;
+      padding: 10px;
+      min-height: 150px;
+      width: 300px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      color: #000;
+
+      > p {
+        font-size: 1.6rem;
+      }
+
+      > span {
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
+    }
+
+    .income {
+      flex-grow: 2;
+    }
+
+    .wallet {
+      flex-grow: 2;
+    }
+
+    .expense {
+      flex-grow: 2;
+    }
+  }
+
+  .transactions {
+    margin-top: 50px;
+    // padding: 40px 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    h2 {
+      margin-bottom: 20px;
+      font-weight: 400;
+      background-color: blue;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .add-new-transactions {
+      form {
+        padding: 10px;
+        margin: 0 auto;
+        // background-color: #f0f0f0f0;
+        // color: #000;
+        // max-width: 500px;
+        // border: 2px solid yellow;
+        max-width: 60%;
+
+        label,
+        input {
+          display: block;
+          width: 100%;
+        }
+
+        label {
+          margin-top: 40px;
+          font-size: 1.3rem;
+        }
+
+        select {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          padding: 5px;
+          min-width: 100%;
+          cursor: pointer;
+        }
+
+        input {
+          margin-top: 20px;
+          min-width: 300px;
+          background-color: transparent;
+          border: 0;
+          border-bottom: 2px solid #fff;
+          color: #fff;
+          padding: 5px 0px;
+
+          &[type='submit'] {
+            margin-top: 70px;
+          }
+
+          &[type='submit'],
+          &[type='reset'] {
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            padding: 8px;
+            border: 0;
+            border-radius: 3px;
+          }
+
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+    }
+
+    .history-of-transactions {
+      // border: 2px solid yellow;
+
+      ul {
+        padding: 20px;
+        li {
+          padding: 10px 10px;
+          background-color: #fff;
+          color: #000;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          i {
+            color: red;
+            padding: 5px;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1027px) {
+  .transactions {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .add-new-transactions {
+    justify-content: start;
+
+    form {
+      max-width: 100% !important;
+
+      select {
+        min-width: 300px;
+      }
+    }
+  }
+
+  .history-of-transactions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    ul {
+      padding: 0;
+      width: 90%;
+    }
+  }
+}
+
+.green {
+  background-color: #a6ff96 !important;
+}
+
+.red {
+  background-color: #ff0063 !important;
+}
+
+.flex-container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 60px;
+  gap: 20px;
+
+  .chart {
+    width: 80%;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    max-width: 600px;
+    // flex-direction: column;
+
+    h2 {
+      margin-bottom: 40px;
+      font-size: 2rem;
+      text-align: center;
+      width: 80%;
+    }
+  }
+
+  .cal {
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    form {
+      max-width: 500px;
+      padding: 100px 30px 0px 30px;
+      margin: 0px auto;
+      background-color: #f0f0f0f0;
+      min-height: 500px;
+
+      .display {
+        width: 100%;
+        margin-bottom: 20px;
+
+        input {
+          width: 100%;
+          min-height: 50px;
+          text-align: end;
+          padding: 0px 20px;
+          font-weight: bold;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+
+      .num {
+        display: flex;
+        width: 100%;
+
+        > div {
+          flex: 1;
+          min-height: 40px;
+          margin: 5px;
+          border-radius: 4px;
+
+          input {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+nav {
+  margin-bottom: 50px;
+  background-color: gray;
+
+  ul {
+    display: flex;
+    justify-content: end;
+
+    li {
+      padding: 10px;
+      margin-right: 20px;
+    }
+  }
+}

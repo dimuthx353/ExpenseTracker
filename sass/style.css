@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+  text-transform: capitalize;
+}
+
+::-moz-placeholder {
+  text-transform: capitalize;
+  color: #000;
+}
+
+::placeholder {
+  text-transform: capitalize;
+  color: #000;
+}
+
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  padding: 0px 10px;
+  background-image: url(../images/5.jpg);
+  background-size: cover;
+  background-position: center;
+  -o-object-position: center;
+     object-position: center;
+  transition: background-image 0.2s ease-in;
+}
+
+.login {
+  border-radius: 5px;
+  padding: 30px 50px 50px 50px;
+  box-shadow: rgba(255, 255, 255, 0.27) 0px 0px 0.25em, rgba(255, 255, 255, 0.35) 0px 0.25em 1em;
+  margin-top: 50px;
+  max-width: 400px;
+  border: 1px solid transparent;
+  background-color: rgba(7, 7, 18, 0.533);
+}
+.login .sign-up-form {
+  display: none;
+}
+.login .sign-up-form input {
+  margin-bottom: 20px;
+}
+.login .sign-up-form input::-moz-placeholder {
+  color: #fff;
+}
+.login .sign-up-form input::placeholder {
+  color: #fff;
+}
+.login .sign-up-form .check {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.login .sign-up-form input[type=checkbox] {
+  margin-bottom: 0;
+  width: 10px;
+  margin-bottom: 5px;
+}
+.login .sign-up-form label {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-wrap: wrap;
+}
+.login .sign-up-form input[type=submit] {
+  margin-bottom: 0px;
+}
+.login > div.animation-color-box {
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.login > div.animation-color-box p {
+  margin-right: 10px;
+}
+.login > div.animation-color-box > p:nth-of-type(1) {
+  display: inline-block;
+  text-align: right;
+  text-transform: none;
+  border-radius: 50%;
+  border: 5px solid orange;
+  animation: changeColor1 5s ease infinite;
+}
+.login > div.animation-color-box > p:nth-of-type(2) {
+  display: inline-block;
+  text-align: right;
+  text-transform: none;
+  border-radius: 50%;
+  border: 5px solid red;
+  animation: changeColor2 2s ease-in-out infinite;
+}
+.login > div.animation-color-box > p:nth-of-type(3) {
+  display: inline-block;
+  text-align: right;
+  text-transform: none;
+  border-radius: 50%;
+  border: 5px solid green;
+  animation: changeColor3 1s ease-in infinite;
+}
+.login .welcome-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1rem;
+  color: rgba(240, 240, 240, 0.9411764706);
+  margin-bottom: 40px;
+  color: #e8e1d9;
+}
+.login .mb {
+  margin-bottom: 30px;
+}
+.login .mt {
+  margin-top: 20px;
+}
+.login #login-form label span {
+  cursor: pointer;
+  position: relative;
+  top: 30px;
+}
+.login #login-form input {
+  margin-bottom: 0px;
+}
+.login form #password {
+  margin-top: 30px;
+}
+.login form label {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+}
+.login form input {
+  border: 0;
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+.login form input[type=submit] {
+  background-color: #f0f0f0;
+  font-weight: 800;
+  color: #000;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  letter-spacing: 1px;
+  font-weight: 5600;
+  text-transform: uppercase;
+}
+.login form input:focus {
+  outline: 0;
+}
+.login form input,
+.login form label {
+  display: block;
+  width: 100%;
+}
+.login form button {
+  margin-top: 40px;
+  width: 100%;
+  border: 0;
+}
+.login form button:focus {
+  outline: 0;
+}
+.login form a {
+  font-weight: 100;
+  margin-top: 15px;
+  display: inline-flex;
+  float: right;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  padding: 0px 2px;
+}
+.login form a:hover {
+  color: red;
+}
+.login form .error-message {
+  display: flex;
+  justify-content: center;
+  color: red;
+  margin-top: 30px;
+  font-size: 13px;
+}
+.login .sign-up-btn {
+  background-color: #000;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 5600;
+  text-transform: uppercase;
+  min-height: 40px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+
+@keyframes changeColor1 {
+  0% {
+    border-color: orange;
+  }
+  10% {
+    border-color: white;
+  }
+  40% {
+    border-color: chartreuse;
+  }
+  50% {
+    border-color: green;
+  }
+  100% {
+    border-color: red;
+  }
+}
+@keyframes changeColor2 {
+  0% {
+    border-color: red;
+  }
+  10% {
+    border-color: orange;
+  }
+  50% {
+    border-color: green;
+  }
+  70% {
+    border-color: blue;
+  }
+  100% {
+    border-color: white;
+  }
+}
+@keyframes changeColor3 {
+  0% {
+    border-color: white;
+  }
+  10% {
+    border-color: orange;
+  }
+  40% {
+    border-color: pink;
+  }
+  50% {
+    border-color: green;
+  }
+  60% {
+    border-color: aqua;
+  }
+  100% {
+    border-color: red;
+  }
+}
+@media screen and (max-width: 460px) {
+  body {
+    padding: 20px 18px;
+    overflow: hidden;
+  }
+  .login {
+    border: none !important;
+  }
+  .login form label {
+    font-size: 1rem;
+  }
+}
+.display-none {
+  display: none !important;
+}
+
+.green-color {
+  color: greenyellow !important;
+}/*# sourceMappingURL=style.css.map */

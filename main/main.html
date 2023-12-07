@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title  -->
+    <title>Project 01</title>
+
+    <!-- External CSS  -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Fontawesome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- jQuery CDN    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- jQuery UI -->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+    <!-- Chart JS CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Fontawesome Icon CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Boostrap Icon CDN  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css"
+      integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w=="
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- navigation menu  -->
+      <nav id="nav">
+        <div class="side-bar-icon">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="side-bar-mobile">
+          <li><a href="">home</a></li>
+          <li><a href="#history">overview</a></li>
+          <li><a href="../about/about.html">about</a></li>
+        </ul>
+      </nav>
+      <div class="overview">
+        <h1>expense tracker</h1>
+        <div class="box-content">
+          <div class="wallet">
+            <span>wallet</span><span id="wallet">100</span>
+          </div>
+          <div class="income">
+            <span>income</span><span id="income">200</span>
+          </div>
+          <div class="expense">
+            <span>expense</span><span id="expense">300</span>
+          </div>
+        </div>
+      </div>
+      <div class="transactions">
+        <div class="add">
+          <h3>add new transaction</h3>
+          <form action="" id="form">
+            <label for="">description</label>
+            <input type="text" name="note" />
+            <label for="type">transaction type</label>
+            <select name="type" id="type">
+              <option value="income">income</option>
+              <option value="expense">expense</option>
+            </select>
+            <label for="">amount</label>
+            <input type="number" name="amount" />
+            <input type="submit" />
+            <input type="reset" value="reset form" />
+          </form>
+        </div>
+        <div class="history" id="history">
+          <h3>history</h3>
+          <ul id="ul">
+            <li class="li-head">
+              <span class="content">content</span>
+              <span>amount</span>
+              <span>date</span>
+              <span>remove</span>
+            </li>
+          </ul>
+          <p class="delete-btn-p">
+            <button class="delete-all" id="delete-all">delete all</button>
+          </p>
+        </div>
+      </div>
+      <div class="chart" id="chart">
+        <div class="pie-chart">
+          <h3>chart overiew</h3>
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+      <hr style="margin: 30px 0px" />
+      <div class="footer">
+        <footer>
+          <div class="contact-us">
+            <p>get in touch</p>
+            <p>don't miss any updates of our new products.</p>
+            <div class="send-message">
+              <input type="text" placeholder="enter your email address" />
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+          </div>
+          <div class="follow-us">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-square-youtube"></i>
+            <i class="fa-brands fa-square-github"></i>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <!-- JS  -->
+    <script src="./main.js"></script>
+  </body>
+</html>

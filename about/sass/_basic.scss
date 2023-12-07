@@ -1,0 +1,70 @@
+// VARIABLE CSS FILE
+@import './variables';
+
+// FUNCTION CSS FILE
+@import './functions';
+
+// RESET
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// BAISC STYLING
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $poppins;
+  background-color: $bl-background;
+  color: map-get($map: $colors, $key: wh);
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+  text-transform: capitalize;
+}
+
+::placeholder {
+  text-transform: capitalize;
+}
+
+// COMMON RULES FOR CLASSES
+
+.flex-container {
+  display: flex;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.display-none {
+  display: none;
+}
+
+.clear-fix {
+  clear: both;
+}

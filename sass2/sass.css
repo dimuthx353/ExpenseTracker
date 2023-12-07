@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input {
+  cursor: pointer;
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+  text-transform: capitalize;
+}
+
+::-moz-placeholder {
+  text-transform: capitalize;
+  color: #000;
+}
+
+::placeholder {
+  text-transform: capitalize;
+  color: #000;
+}
+
+body {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+i {
+  cursor: pointer;
+}
+
+.container {
+  margin-top: 30px;
+  min-height: 100vh;
+  padding: 0px 30px;
+  margin-bottom: 20px;
+}
+.container .balance {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+.container .balance .income {
+  background-color: #a2ff86;
+}
+.container .balance .expense {
+  background-color: #ff0063;
+}
+.container .balance .wallet {
+  background-color: #fff;
+}
+.container .balance .wallet,
+.container .balance .income,
+.container .balance .expense {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  min-height: 150px;
+  width: 300px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #000;
+}
+.container .balance .wallet > p,
+.container .balance .income > p,
+.container .balance .expense > p {
+  font-size: 1.6rem;
+}
+.container .balance .wallet > span,
+.container .balance .income > span,
+.container .balance .expense > span {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+.container .balance .income {
+  flex-grow: 2;
+}
+.container .balance .wallet {
+  flex-grow: 2;
+}
+.container .balance .expense {
+  flex-grow: 2;
+}
+.container .transactions {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+.container .transactions h2 {
+  margin-bottom: 20px;
+  font-weight: 400;
+  background-color: blue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+}
+.container .transactions .add-new-transactions form {
+  padding: 10px;
+  margin: 0 auto;
+  max-width: 60%;
+}
+.container .transactions .add-new-transactions form label,
+.container .transactions .add-new-transactions form input {
+  display: block;
+  width: 100%;
+}
+.container .transactions .add-new-transactions form label {
+  margin-top: 40px;
+  font-size: 1.3rem;
+}
+.container .transactions .add-new-transactions form select {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 5px;
+  min-width: 100%;
+  cursor: pointer;
+}
+.container .transactions .add-new-transactions form input {
+  margin-top: 20px;
+  min-width: 300px;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  padding: 5px 0px;
+}
+.container .transactions .add-new-transactions form input[type=submit] {
+  margin-top: 70px;
+}
+.container .transactions .add-new-transactions form input[type=submit], .container .transactions .add-new-transactions form input[type=reset] {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border: 0;
+  border-radius: 3px;
+}
+.container .transactions .add-new-transactions form input:focus {
+  outline: 0;
+}
+.container .transactions .history-of-transactions ul {
+  padding: 20px;
+}
+.container .transactions .history-of-transactions ul li {
+  padding: 10px 10px;
+  background-color: #fff;
+  color: #000;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .transactions .history-of-transactions ul li i {
+  color: red;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1027px) {
+  .transactions {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .add-new-transactions {
+    justify-content: start;
+  }
+  .add-new-transactions form {
+    max-width: 100% !important;
+  }
+  .add-new-transactions form select {
+    min-width: 300px;
+  }
+  .history-of-transactions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .history-of-transactions ul {
+    padding: 0;
+    width: 90%;
+  }
+}
+.green {
+  background-color: #a6ff96 !important;
+}
+
+.red {
+  background-color: #ff0063 !important;
+}
+
+.flex-container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 60px;
+  gap: 20px;
+}
+.flex-container .chart {
+  width: 80%;
+  max-width: 600px;
+}
+.flex-container .chart h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+  text-align: center;
+  width: 80%;
+}
+.flex-container .cal {
+  width: 100%;
+}
+.flex-container .cal h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+.flex-container .cal form {
+  max-width: 500px;
+  padding: 100px 30px 0px 30px;
+  margin: 0px auto;
+  background-color: rgba(240, 240, 240, 0.9411764706);
+  min-height: 500px;
+}
+.flex-container .cal form .display {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.flex-container .cal form .display input {
+  width: 100%;
+  min-height: 50px;
+  text-align: end;
+  padding: 0px 20px;
+  font-weight: bold;
+}
+.flex-container .cal form .display input:focus {
+  outline: 0;
+}
+.flex-container .cal form .num {
+  display: flex;
+  width: 100%;
+}
+.flex-container .cal form .num > div {
+  flex: 1;
+  min-height: 40px;
+  margin: 5px;
+  border-radius: 4px;
+}
+.flex-container .cal form .num > div input {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  margin-bottom: 50px;
+  background-color: gray;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+}
+nav ul li {
+  padding: 10px;
+  margin-right: 20px;
+}/*# sourceMappingURL=sass.css.map */

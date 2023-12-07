@@ -1,0 +1,63 @@
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+$roboto: 'Roboto', sans-serif;
+$poppins: 'Poppins', sans-serif;
+// ----------------------------------------
+
+// COLORS
+$colors: (
+  wh: #fff,
+  bl: #000,
+  re: red,
+  ye: yellow,
+);
+// ----------------------------------------
+
+// BACKGROUND COLORS
+$wh-background: map-get(
+  $map: $colors,
+  $key: wh,
+);
+
+$bl-background: map-get(
+  $map: $colors,
+  $key: bl,
+);
+
+$re-background: map-get(
+  $map: $colors,
+  $key: re,
+);
+
+$ye-background: map-get(
+  $map: $colors,
+  $key: ye,
+);
+// ----------------------------------------
+
+// BORDERS
+$wh-border: 3px solid
+  map-get(
+    $map: $colors,
+    $key: wh,
+  );
+
+$bl-borderr: 3px solid
+  map-get(
+    $map: $colors,
+    $key: bl,
+  );
+
+$re-border: 3px solid
+  map-get(
+    $map: $colors,
+    $key: re,
+  );
+
+$ye-border: 3px solid
+  map-get(
+    $map: $colors,
+    $key: ye,
+  );
+// ----------------------------------------
